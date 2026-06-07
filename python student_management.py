@@ -2,8 +2,6 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 import sqlite3
 
-# ================= DATABASE =================
-
 conn = sqlite3.connect("students.db")
 cursor = conn.cursor()
 
@@ -21,8 +19,6 @@ CREATE TABLE IF NOT EXISTS students(
 
 conn.commit()
 
-
-# ================= FUNCTIONS =================
 
 def calculate_grade(marks):
     if marks >= 90:
@@ -171,7 +167,6 @@ def search_student():
         tree.insert("", tk.END, values=row)
 
 
-# ================= GUI =================
 
 root = tk.Tk()
 root.title("Student Management System")
